@@ -107,9 +107,57 @@
             e.preventDefault();//stop default submission
 			var season = $(this).attr("href");//contents of href attribute of this element
 			alert(season);
+			
+			<script src="https://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+	<script>
+	$("document").ready(function(){
+		$('.seasons a').click(function(e){//find all a tags inside class of seasons
+            e.preventDefault();//stop default submission
+			var season = $(this).attr("href");//contents of href attribute of this element
+			//alert(season);
+			
+			season = season.toLowerCase();
+
+			switch(season){
+
+				case 'spring':
+					$('main header h3').html('Hop into our spring wear');
+					$('#logo').attr('src','images/spring.gif');
+					$('#wear').attr('src','images/spring-wear.jpg');
+					$('html').css('background-color','#aecf70');
+				break;
+
+				case 'summer':
+					$('main header h3').html('Hop into our summer wear');
+					$('#logo').attr('src','images/summer.gif');
+					$('#wear').attr('src','images/summer-wear.jpg');
+					$('html').css('background-color','#cf707f');
+				break;
+
+				case 'fall':
+					$('main header h3').html('Hop into our fall wear');
+					$('#logo').attr('src','images/fall.gif');
+					$('#wear').attr('src','images/fall-wear.jpg');
+					$('html').css('background-color','#f09b19');
+				break;
+
+				case 'winter':
+					$('main header h3').html('Hop into our winter Wear');
+					$('#logo').attr('src','images/winter.gif');
+					$('#wear').attr('src','images/winter-wear.jpg');
+					$('html').css('background-color','#8ad3ff');
+				break;
+			}
+
+
+
+
+
 		});
 	});
     </script>
+		
+	
 	
 </body>
 </html>
